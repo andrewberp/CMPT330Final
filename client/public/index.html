@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="apple-itunes-app" content="app-id=1234654160">
 <title>StatMuse | Search StatMuse, save time.</title>
+<link rel="stylesheet" type="text/css" href="./client/public/css/index.css"> <!--LINK-->
 <meta name="description" content="Instant answers to your NBA, NFL, NHL, MLB and PGA questions. Stats, scores, schedules, odds, fantasy and more &mdash; just ask.">
 <meta name="keywords" content="StatMuse, sports, stats, search, sports search, sports information, sports stats, statistics, fantasy stats, advanced stats, betting information, NBA stats, NFL stats, NHL stats, PGA stats, MLB stats">
 <meta property="fb:app_id" content="915991831757165">
@@ -46,15 +47,63 @@ gtag('js', new Date());
 
 gtag('config', 'G-QRW302M4ZR');
 </script>
+<link rel="stylesheet" type="text/css" href="css/index.css"> <!--CODE-->
 </head>
 <body>
-
+  <script src="./client/public/js/otherfunctions.js"></script> <!--CODE LINK-->
 
 
 <main id="home" class="home-layout [--header-height:55px] md:[--header-height:64px]">
   <div class="sidebar hidden md:block min-w-[75px] bg-[#f9f9f9]">
     <sidebar-menu></sidebar-menu>
   </div>
+
+      <style>
+          .nightmode {
+              background-color: #454545;
+              color: #f1f1f1;
+          }
+          .nightmode button {
+              background-color: #f1f1f1;
+              color: #222;
+              border-color: #f1f1f1;
+
+            
+          }
+          
+          .nightmode .sidebar {
+          background-color: #454545;
+          color: #f1f1f1;
+          }
+          .nightmode .sticky {
+          background-color: #454545;
+          color: #f1f1f1;
+          }   
+          .nightmode .flex {
+          background-color: #454545;
+          color: #f1f1f1;
+          }   
+
+
+      </style>
+  </head>
+  <body>
+      <header class="flex items-center justify-between flex-wrap bg-white p-6"> <!--NIGHTMODE-->
+          <div class="flex items-center flex-shrink-0 mr-6">
+              <span class="font-semibold text-xl tracking-tight"></span>
+          </div>
+          <div class="flex space-x-5 items-center flex-1 justify-end">
+            <button id="nightmode-btn" class="flex items-center justify-center border border-primary rounded-md hover:text-primary hover:bg-white hover:border-primary hover:border hover:no-underline py-1 px-4 bg-primary text-white" style="margin-top: 9px; margin-right: 9px;">Nightmode</button>
+          </div>
+      </header> 
+  
+      <script>
+          document.getElementById('nightmode-btn').addEventListener('click', function() {
+              document.body.classList.toggle('nightmode');
+          });
+      </script> <!--END NIGHTMODE-->
+  </body>
+  </html>
 
   <div class="main h-[var(--header-height)] px-3 md:px-[21px] bg-white flex items-center sticky md:relative top-0 z-20">
     <div class="min-w-[25px] md:hidden">
@@ -174,16 +223,15 @@ MLB
 PGA
           </a>
 
-        <a class="hidden md:flex items-center justify-center border border-secondary rounded-md text-secondary hover:text-white hover:bg-secondary hover:no-underline p-[5px] flex-1" style="min-width: fit-content;" href="fantasy.html">
-          Fantasy
+          <a class="hidden md:flex items-center justify-center border border-secondary rounded-md text-secondary hover:text-white hover:bg-secondary hover:no-underline p-[5px] flex-1" style="min-width: fit-content;" href="today.html">
+            Today
         </a>
-      </div>
-      <div class="flex flex-nowrap gap-[5px] mb-2.5 md:hidden">
-        <a class="flex items-center justify-center border border-secondary rounded-md text-secondary hover:text-white hover:bg-secondary hover:no-underline p-[5px] flex-1" style="max-width: fit-content;" href="fantasy.html">
-          Fantasy
-        </a>
-      </div>
-    </div>
+        </div>
+        <div class="flex flex-nowrap gap-[5px] mb-2.5 md:hidden">
+            <a class="flex items-center justify-center border border-secondary rounded-md text-secondary hover:text-white hover:bg-secondary hover:no-underline p-[5px] flex-1" style="max-width: fit-content;" href="today.html">
+                Today
+            </a>
+        </div>
 
       <div class="mb-[30px] mt-[32px] w-full md:w-[400px]">
 <div data-track-view-video class="border border-black rounded-md overflow-hidden z-0">
@@ -197,7 +245,7 @@ PGA
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/jokic-tonight-24-pts-19-reb-8-oreb-5-ast-19-more-offensive-rebounds-than-d94ca801">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #0C2340">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jokic tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Nikola Jokic's stats tonight vs the Suns:
 
 24 PTS
 19 REB (8 OREB)
@@ -208,7 +256,7 @@ More offensive rebounds than the entire Suns roster." src="https://cdn.statmuse.
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>Jokic tonight:</p><p>24 PTS<br>
+<p>Jokic tonight:</p><p>24 PTS - 42.8% FG<br>
 19 REB (8 OREB)<br>
 5 AST<br>
 +19</p><p>More offensive rebounds than the entire Suns roster.</p>
@@ -222,7 +270,7 @@ More offensive rebounds than the entire Suns roster." src="https://cdn.statmuse.
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/jamal-murray-tonight-34-pts-5-reb-9-ast-6-10-3p-ties-alex-english-for-th-d143a9c9">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #0C2340">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jamal Murray tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jamal Murray's stats tonight vs the Suns:
 
 34 PTS
 5 REB
@@ -233,7 +281,7 @@ Ties Alex English for the 2nd most 30/5/5 playoff games by a Nugget." src="https
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>Jamal Murray tonight:</p><p>34 PTS<br>
+<p>Jamal Murray tonight:</p><p>34 PTS - 54.2% FG<br>
 5 REB<br>
 9 AST<br>
 6-10 3P</p><p>Ties Alex English for the 2nd most 30/5/5 playoff games by a Nugget.</p>
@@ -247,7 +295,7 @@ Ties Alex English for the 2nd most 30/5/5 playoff games by a Nugget." src="https
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/nikita-kucherov-playoff-ranks-since-2019-1st-points-101-1st-assists-77-2-791f35e3">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #00205B">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Nikita Kucherov playoff ranks since 2019:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Nikita Kucherov playoff leading categories 2019:
 
 1st &ndash;&ndash; Points (101)
 1st &ndash;&ndash; Assists (77)
@@ -272,7 +320,7 @@ He's the only player with 85+ points and 55+ assists." src="https://cdn.statmuse
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/lebron-tonight-22-pts-5-reb-6-ast-9-13-fg-the-only-player-with-100-2055-78942578">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #582C83">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="LeBron tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="LeBron's stats tonight vs the Grizzlies:
 
 22 PTS
 5 REB
@@ -283,10 +331,10 @@ The only player with 100+ 20/5/5 playoff games. LeBron has 191." src="https://cd
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>LeBron tonight:</p><p>22 PTS<br>
+<p>LeBron tonight:</p><p>22 PTS - 69% FG<br>
 5 REB<br>
 6 AST<br>
-9-13 FG</p><p>The only player with 100+ 20/5/5 playoff games. LeBron has 191.</p>
+1 STL</p><p>The only player with 100+ 20/5/5 playoff games. LeBron has 191.</p>
       </span>
       <div class="flex items-center mt-[5px]">
         <content-share href="https://statm.us/e/I0Qf6Wdm1"></content-share>
@@ -297,7 +345,7 @@ The only player with 100+ 20/5/5 playoff games. LeBron has 191." src="https://cd
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/dlo-tonight-31-pts-playoff-career-high-12-17-fg-5-9-3p-more-points-than-271f8ae5">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #582C83">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="DLo tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="DLo's stats tonight versus the Grizzlies:
 
 31 PTS (playoff career-high)
 12-17 FG
@@ -307,7 +355,7 @@ More points than Bane and Morant combined." src="https://cdn.statmuse.com/img/nb
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>DLo tonight:</p><p>31 PTS (playoff career-high)<br>
+<p>DLo tonight:</p><p>31 PTS - 70.5% FG (playoff career-high)<br>
 12-17 FG<br>
 5-9 3P</p><p>More points than Bane and Morant combined.</p>
       </span>
@@ -320,7 +368,7 @@ More points than Bane and Morant combined." src="https://cdn.statmuse.com/img/nb
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/ad-tonight-16-pts-14-reb-5-blk-6-9-fg-26-blocks-in-the-first-round-nobod-00acfaa7">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #582C83">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="AD tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="AD's stats tonigh versus the Grizzlies:
 
 16 PTS
 14 REB
@@ -331,7 +379,7 @@ More points than Bane and Morant combined." src="https://cdn.statmuse.com/img/nb
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>AD tonight:</p><p>16 PTS<br>
+<p>AD tonight:</p><p>16 PTS - 66.7% FG<br>
 14 REB<br>
 5 BLK<br>
 6-9 FG</p><p>26 blocks in the first round&hellip; nobody else has more than 13.</p>
@@ -345,7 +393,7 @@ More points than Bane and Morant combined." src="https://cdn.statmuse.com/img/nb
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/deaaron-fox-tonight-26-pts-11-ast-10-18-fg-joins-mike-bibby-and-oscar-ro-077e362b">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #582C83">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="De&rsquo;Aaron Fox tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="De&rsquo;Aaron Fox's stats tonight verus the Warriors:
 
 26 PTS
 11 AST
@@ -355,7 +403,7 @@ Joins Mike Bibby and Oscar Robertson as the only players in franchise history wi
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>De&rsquo;Aaron Fox tonight:</p><p>26 PTS<br>
+<p>De&rsquo;Aaron Fox tonight:</p><p>26 PTS - 55.6% FG<br>
 11 AST<br>
 10-18 FG</p><p>Joins Mike Bibby and Oscar Robertson as the only players in franchise history with a 25p/10a playoff game.</p>
       </span>
@@ -368,7 +416,7 @@ Joins Mike Bibby and Oscar Robertson as the only players in franchise history wi
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/malik-monk-tonight-28-pts-6-reb-2-stl-2-blk-8-14-fg-9-10-ft-leading-benc-27a024ad">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #582C83">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Malik Monk tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Malik Monk's stats tonight vs the Warriors:
 
 28 PTS
 6 REB
@@ -381,7 +429,7 @@ Leading bench players in points and free throws off the bench this playoffs." sr
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>Malik Monk tonight:</p><p>28 PTS<br>
+<p>Malik Monk tonight:</p><p>28 PTS - 57.1% FG<br>
 6 REB<br>
 2 STL<br>
 2 BLK<br>
@@ -397,7 +445,7 @@ Leading bench players in points and free throws off the bench this playoffs." sr
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/jaylen-brown-tonight-32-pts-5-reb-6-3p-leads-the-celtics-all-time-in-305-1cbb5473">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #007A33">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jaylen Brown tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jaylen Brown's stats tonight versus the Hawks:
 
 32 PTS
 5 REB
@@ -407,7 +455,7 @@ Leads the Celtics all-time in 30/5 on 5 3P playoff games." src="https://cdn.stat
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>Jaylen Brown tonight:</p><p>32 PTS<br>
+<p>Jaylen Brown tonight:</p><p>32 PTS - 52% FG<br>
 5 REB<br>
 6 3P</p><p>Leads the Celtics all-time in 30/5 on 5 3P playoff games.</p>
       </span>
@@ -420,7 +468,7 @@ Leads the Celtics all-time in 30/5 on 5 3P playoff games." src="https://cdn.stat
 
   <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/jayson-tatum-tonight-30-pts-14-reb-7-ast-4-3p-passes-paul-pierce-in-all-b68fae23">
     <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #007A33">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jayson Tatum tonight:
+      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jayson Tatum's stats tonight versus the Hawks:
 
 30 PTS
 14 REB
@@ -431,7 +479,7 @@ Passes Paul Pierce in all-time 30-point playoff games by a Celtic." src="https:/
     </div>
     <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
       <span class="flex-1 leading-snug space-y-4">
-<p>Jayson Tatum tonight:</p><p>30 PTS<br>
+<p>Jayson Tatum tonight:</p><p>30 PTS - 55% FG <br>
 14 REB<br>
 7 AST<br>
 4 3P</p><p>Passes Paul Pierce in all-time 30-point playoff games by a Celtic.</p>
@@ -442,249 +490,6 @@ Passes Paul Pierce in all-time 30-point playoff games by a Celtic." src="https:/
       </div>
     </div>
   </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/kevon-looney-in-the-playoffs-1st-in-rebounds-50th-in-minutes-beast-971f9b53">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #1D4289">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Kevon Looney in the playoffs:
-
-&mdash; 1st in rebounds
-&mdash; 50th in minutes
-
-Beast." src="https://cdn.statmuse.com/img/nba/players/golden-state-warriors-kevon-looney2022-min--b__1bp6s.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Kevon Looney in the playoffs:</p><p>&mdash; 1st in rebounds<br>
-&mdash; 50th in minutes</p><p>Beast.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/Rdf4M12BE"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Thursday, April 27th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/devin-booker-in-the-playoffs-1st-in-iso-points-1st-in-transition-points-b1cb50c4">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #201747">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Devin Booker in the playoffs:
-
-&mdash; 1st in iso points
-&mdash; 1st in transition points
-&mdash; 1st in mid-range buckets
-
-Only Jimmy has scored more points." src="https://cdn.statmuse.com/img/nba/players/phoenix-suns-devin-booker2021-min--00ggreo8.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Devin Booker in the playoffs:</p><p>&mdash; 1st in iso points<br>
-&mdash; 1st in transition points<br>
-&mdash; 1st in mid-range buckets</p><p>Only Jimmy has scored more points.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/e1TfiBzFM"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Thursday, April 27th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/donovan-mitchell-this-season-283-ppg-career-high-36-3pm-career-high-top-763c0821">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #6F263D">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Donovan Mitchell this season:
-
-&mdash; 28.3 PPG (career-high)
-&mdash; 3.6 3PM (career-high)
-&mdash; Top 10 in points and threes
-&mdash; Cavs record for 3s in a season
-&mdash; Most 30-point games by a Cav since LeBron
-&mdash; Most 40-point games by a Cav in a season
-
-Led the Cavs in points, steals and threes." src="https://cdn.statmuse.com/img/nba/players/cleveland-cavaliers-donovan-mitchell2022-min--5youbyts.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Donovan Mitchell this season:</p><p>&mdash; 28.3 PPG (career-high)<br>
-&mdash; 3.6 3PM (career-high)<br>
-&mdash; Top 10 in points and threes<br>
-&mdash; Cavs record for 3s in a season<br>
-&mdash; Most 30-point games by a Cav since LeBron<br>
-&mdash; Most 40-point games by a Cav in a season</p><p>Led the Cavs in points, steals and threes.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/5rAR5bEw8"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/steph-tonight-31-pts-8-ast-and-a-game-sealing-and-one-4a14d545">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #1D4289">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Steph tonight:
-
-31 PTS
-8 AST
-
-And a game-sealing And One." src="https://cdn.statmuse.com/img/nba/players/golden-state-warriors-stephen-curry2021-min-1-1--gmckzkgf.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Steph tonight:</p><p>31 PTS<br>
-8 AST</p><p>And a game-sealing And One.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/VGOlqJubV"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/butler-in-the-first-round-376-ppg-60-rpg-597-fg-444-3p-led-the-sixth-8-s-793d0281">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #862633">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Butler in the first round:
-
-37.6 PPG
-6.0 RPG
-59.7 FG%
-44.4 3P%
-
-Led the sixth 8 seed in NBA history to beat the 1 seed." src="https://cdn.statmuse.com/img/nba/players/miami-heat-jimmy-butler2022-min--3he-rgtw.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Butler in the first round:</p><p>37.6 PPG<br>
-6.0 RPG<br>
-59.7 FG%<br>
-44.4 3P%</p><p>Led the sixth 8 seed in NBA history to beat the 1 seed.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/iT8dmOdBk"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/draymond-off-the-bench-21-pts-7-ast-4-stl-8-10-fg-1-2-3p-back-to-back-wi-73ac95d0">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #1D4289">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Draymond off the bench:
-
-21 PTS
-7 AST
-4 STL
-8-10 FG
-1-2 3P
-
-Back-to-back wins as a 6th man." src="https://cdn.statmuse.com/img/nba/players/golden-state-warriors-draymond-green2018-min--ml0c-oct.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Draymond off the bench:</p><p>21 PTS<br>
-7 AST<br>
-4 STL<br>
-8-10 FG<br>
-1-2 3P</p><p>Back-to-back wins as a 6th man.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/zQii106PR"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/kevon-looney-tonight-4-pts-22-reb-7-ast-the-only-player-with-multiple-20-69e7f68f">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #1D4289">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Kevon Looney tonight:
-
-4 PTS
-22 REB
-7 AST
-
-The only player with multiple 20-rebound games this playoffs." src="https://cdn.statmuse.com/img/nba/players/golden-state-warriors-kevon-looney2022-min--b__1bp6s.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Kevon Looney tonight:</p><p>4 PTS<br>
-22 REB<br>
-7 AST</p><p>The only player with multiple 20-rebound games this playoffs.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/avzxrwaBU"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/jimmy-butler-tonight-42-pts-7-reb-8-ast-3-3p-unstoppable-abe91cc4">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #862633">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Jimmy Butler tonight:
-
-42 PTS
-7 REB
-8 AST
-3 3P
-
-Unstoppable." src="https://cdn.statmuse.com/img/nba/players/miami-heat-jimmy-butler2022-min--3he-rgtw.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Jimmy Butler tonight:</p><p>42 PTS<br>
-7 REB<br>
-8 AST<br>
-3 3P</p><p>Unstoppable.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/KV5tNbJJa"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/bam-tonight-20-pts-10-reb-10-ast-joins-jimmy-and-lebron-as-the-only-heat-0fffa46f">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #862633">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="Bam tonight:
-
-20 PTS
-10 REB
-10 AST
-
-Joins Jimmy and LeBron as the only Heat with a 20-point triple-double in a playoff game." src="https://cdn.statmuse.com/img/nba/players/miami-heat-bam-adebayo-min--onbkpats.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>Bam tonight:</p><p>20 PTS<br>
-10 REB<br>
-10 AST</p><p>Joins Jimmy and LeBron as the only Heat with a 20-point triple-double in a playoff game.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/n4LeIvQUH"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Wednesday, April 26th</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-col md:flex-row mb-[30px] cursor-pointer" data-clickable-url="https://www.statmuse.com/musings/kd-tonight-31-pts-6-reb-10-19-fg-4-6-3p-and-he-was-the-second-option-44994c8e">
-    <div class="flex items-end justify-center w-full md:w-64 min-h-[10rem] rounded-lg" style="background-color: #201747">
-      <lazy-img class-name="h-36 max-w-full object-contain" alt="KD tonight:
-
-31 PTS
-6 REB
-10-19 FG
-4-6 3P
-
-and he was the second option." src="https://cdn.statmuse.com/img/nba/players/phoenix-suns-kevin-durant-min--f7bszj9o.png" data-cy-illustration></lazy-img>
-    </div>
-    <div class="flex-1 flex flex-col pt-4 px-2.5 md:px-5 ">
-      <span class="flex-1 leading-snug space-y-4">
-<p>KD tonight:</p><p>31 PTS<br>
-6 REB<br>
-10-19 FG<br>
-4-6 3P</p><p>and he was the second option.</p>
-      </span>
-      <div class="flex items-center mt-[5px]">
-        <content-share href="https://statm.us/e/qnhZZZIKo"></content-share>
-        <p class="text-[0.8rem] text-[#969ca1] uppercase tracking-[0.07rem] my-3 ml-[20px]">Tuesday, April 25th</p>
-      </div>
-    </div>
-  </div>
-
 
     <h4 class="font-semibold text-right py-4">
 <a href="questions.html">See trending searches</a>
