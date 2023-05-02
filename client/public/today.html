@@ -1,1 +1,281 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Games</title>
+    <link href="https://use.typekit.net/jpj0wqo.css" rel="stylesheet">
+    <link href="https://cdn.statmuse.com/app/css/cosmos-bcb56996745a7acd754b8b25fa6f0b17.css?vsn=d" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .game {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<style>
+    /* Add your other styles here */
+  
+    .nightmode {
+      background-color: #454545;
+      color: #f1f1f1;
+    }
+    .nightmode button {
+      background-color: #f1f1f1;
+      color: #222;
+      border-color: #f1f1f1;
+    }
+    .nightmode .sidebar {
+      background-color: #454545;
+      color: #f1f1f1;
+    }
+    .nightmode .sticky {
+      background-color: #454545;
+      color: #f1f1f1;
+    }
+    .nightmode .flex {
+      background-color: #454545;
+      color: #f1f1f1;
+    }
+  </style>
+
+<body>
+    <header class="flex items-center justify-between flex-wrap bg-white p-6">
+        <div class="flex items-center flex-shrink-0 mr-6">
+          <span class="font-semibold text-xl tracking-tight"></span>
+        </div>
+        <div class="flex space-x-5 items-center flex-1 justify-end">
+            <button id="home-btn" class="flex items-center justify-center border border-primary rounded-md hover:text-primary hover:bg-white hover:border-primary hover:border hover:no-underline py-1 px-4 bg-primary text-white" style="margin-top: 9px; margin-right: 0px;">Home</button>
+          <button id="nightmode-btn" class="flex items-center justify-center border border-primary rounded-md hover:text-primary hover:bg-white hover:border-primary hover:border hover:no-underline py-1 px-4 bg-primary text-white" style="margin-top: 9px; margin-right: 9px;">Nightmode</button>
+        </div>
+      </header>
+      <script>
+        document.getElementById('home-btn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        </script>
+
+    
+      
+      <script>
+        document.getElementById('nightmode-btn').addEventListener('click', function() {
+          document.body.classList.toggle('nightmode');
+        });
+      </script>
+    <div class="container">
+        <div class="section" id="nba-section">
+            <h2 class="section-title">NBA</h2>
+            <div class="game">
+                <div>
+                    Miami Heat @ New York Knicks<br>
+                    7:30pm
+                </div>
+                <div>
+                    Moneyline odds: Knicks -275, Heat +230
+                </div>
+            </div>
+            <div class="game">
+                <div>
+                    Los Angeles Lakers @ Golden State Warriors<br>
+                    10:00pm
+                </div>
+                <div>
+                    Moneyline odds: Warriors -190, Lakers +160
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="nhl-section">
+            <h2 class="section-title">NHL</h2>
+            <div class="game">
+                <div>
+                    Toronto Maple Leafs vs Florida Panthers<br>
+                    7:00pm
+                </div>
+                <div>
+                    Moneyline odds: Panthers +145, Toronto Maple Leafs -170
+                </div>
+            </div>
+            <div class="game">
+                <div>
+                    Seattle Kraken @ Dallas Stars<br>
+                    9:30pm
+                </div>
+                <div>
+                    Moneyline odds: Kraken +150, Stars -175
+                </div>
+            </div>
+        </div>
+        <div class="section" id="mlb-section">
+            <h2 class="section-title">MLB</h2>
+            <!-- Add MLB games here -->
+            <div class="game">
+                <div>
+                    Atlanta Braves @ Miami Marlins<br>
+                    6:40pm
+                </div>
+                <div>
+                    Sportsbook odds not available
+                </div>
+            </div>
+            <!-- ... -->
+        </div>
+        <div class="game">
+            <div>
+                Detroit Tigers vs New York Mets<br>
+                6:40pm
+            </div>
+            <div>
+                Sportsbook odds not available
+            </div>
+        </div>
+        <div class="game">
+            <div>
+                Pittsburgh Pirates @ Tampa Bay Rays<br>
+                6:40pm
+            </div>
+            <div>
+                Sportsbook odds not available
+            </div>
+        </div>
+        <div class="game">
+            <div>
+                Cleveland Guardians @ New York Yankees<br>
+                7:05pm
+            </div>
+            <div>
+                Sportsbook odds not available
+            </div>
+        </div>
+        <div class="game">
+            <div>
+                Washington Nationals vs Chicago Cubs<br>
+                7:05pm
+            </div>
+            <div>
+                Sportsbook odds not available
+            </div>
+        </div>
+        <div class="game">
+            <div>
+                Boston Red Sox vs Toronto Blue Jays<br>
+                7:10pm
+            </div>
+            <div>
+                Sportsbook odds not available
+            </div>
+     </div>
+     <div class="game">
+        <div>
+            Minnesota Twins @ Chicago White Sox<br>
+            7:10pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Kansas City Royals vs Baltimore Orioles<br>
+            7:40pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Los Angeles Angels @ St. Louis Cardinals<br>
+            7:45pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Arizona Diamondbacks @ Texas Rangers<br>
+            8:05pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Houston Astros vs San Francisco Giants<br>
+            8:10pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Milwaukee Brewers @ Colorado Rockies<br>
+            8:40pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Seattle Mariners @ Oakland Athletics<br>
+            9:40pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            San Diego Padres vs Cincinnati Reds<br>
+            9:40pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+    <div class="game">
+        <div>
+            Los Angeles Dodgers vs Philadelphia Phillies<br>
+            10:10pm
+        </div>
+        <div>
+            Sportsbook odds not available
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
