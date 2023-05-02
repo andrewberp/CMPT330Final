@@ -1,0 +1,7 @@
+body {
+    background-color: #ffffff;
+  }
+  
+  body.nightmode {
+    background-color: #454545;
+  }
